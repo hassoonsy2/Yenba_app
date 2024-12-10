@@ -1,32 +1,42 @@
 import React from 'react';
 import '../styles/OrderOnlineSection.css';
-import OrderImage from '../assets/Order.jpg'; // Import the image
+import DeliveryIcon from '../assets/delivery-icon.png';
+import PizzaIcon from '../assets/5.png';
+import PizzaImage from '../assets/pizza-icon.png'; // Add the pizza image for the hero section
 
 const OrderOnlineSection = () => {
     return (
         <section id="order-online">
+            {/* Pizza image positioned in the background */}
+            <img src={PizzaImage} alt="Pizza" className="hero-image" />
+
             <div className="order-container">
                 <div className="order-content">
-                    <h2>Bestel Online</h2>
-                    <p>
-                        Geniet van onze heerlijke gerechten. Bestel nu online en ontvang je bestelling snel thuis!
-                    </p>
+                    <h2>BESTEL VIA THUISBEZORG Anywhere</h2>
+                    <p>Experience Lightning-Fast Pizza Delivery Today!</p>
+
+                    {/* Corrected anchor tag */}
                     <a
                         href="https://www.thuisbezorgd.nl/winkel/supermarkt-yenba/producten"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="order-btn"
                     >
-                        Bestel Nu
+                        Order Now
                     </a>
                 </div>
-                <div id="simit-image-container">
-                    {/* Replace the 3D model with an image */}
-                    <img
-                        src={OrderImage}
-                        alt="Heerlijk gerecht"
-                        className="order-image"
-                    />
+
+                <div className="feature-icons">
+                    <div className="feature-item">
+                        <img src={DeliveryIcon} alt="Fast Delivery" className="feature-icon" />
+                        <h3>Fast Delivery</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div className="feature-item">
+                        <img src={PizzaIcon} alt="Fresh Pizza" className="feature-icon" />
+                        <h3>Fresh Pizza</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
                 </div>
             </div>
         </section>

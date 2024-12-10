@@ -1,0 +1,187 @@
+:root {
+  --background-color: #ffffff; /* White background */
+  --text-color: #1a1a1a;       /* Neutral dark text */
+  --accent-color: #d10000;     /* Bold Yenba red */
+  --secondary-color: #FF9C73;  /* Subtle orange accent */
+  --button-hover-color: #8b0000; /* Dark red for hover effects */
+  --font-family: Fantasy;
+}
+
+.custom-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: #ffffff; /* Light beige background */
+}
+
+/* Banner Content Layout */
+.banner-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Text Section */
+.text-section {
+  flex: 1;
+}
+
+.text-section h1 {
+  font-size: 2.5rem;
+  color: #f81b1b; /* Dark text */
+  margin-bottom: 1rem;
+  font-family: var(--font-family), ui-serif;
+  font-weight: 900;
+}
+
+.text-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 2rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.primary-button {
+  background-color: #FF4545;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: #FF4545;
+}
+
+.secondary-button {
+  background-color: #fff;
+  color: #FF4545;
+  border: 2px solid #FF4545;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: #FF4545;
+  color: #000000;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #2C2C2B;
+}
+
+.customer-icons {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+/* Image Section */
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meal-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.meal-image {
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: auto;
+}
+
+/* Large Image Styling */
+.meal-image.large {
+  max-width: 500px;
+  transform: translateY(20px); /* Slight offset for staggered design */
+}
+
+/* Small Images Styling */
+.small-images {
+  display: flex;
+  gap: 1rem;
+}
+
+.meal-image.small {
+  max-width: 240px;
+}
+
+/* Hover Effects */
+.meal-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column; /* Stack text and images vertically */
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-section {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 2rem; /* Space between text and images */
+  }
+
+  .image-section {
+    order: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .meal-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .small-images {
+    display: flex;
+    flex-direction: column; /* Stack small images vertically on mobile */
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .meal-image.large,
+  .meal-image.small {
+    max-width: 100%; /* Let images scale */
+    height: auto;
+    transform: none; /* Remove transform shifts */
+  }
+}

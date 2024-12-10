@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
-import '@google/model-viewer'; // Ensure the model-viewer library is installed
 import '../styles/MenuSection.css';
 
 const MenuSection = ({ menu = [] }) => {
     const [selectedItem, setSelectedItem] = useState(null);
     const [activeCategory, setActiveCategory] = useState(null); // Default to no category selected.
-
-    const handleViewDetails = (item) => setSelectedItem(item);
-    const handleCloseDetails = () => setSelectedItem(null);
 
     const categories = menu?.length ? [...new Set(menu.map((item) => item.Category))] : [];
 
@@ -39,11 +35,10 @@ const MenuSection = ({ menu = [] }) => {
             {activeCategory && !selectedItem && (
                 <div className="category-3d-model">
                     <model-viewer
-                        src={`/assets/${activeCategory?.replace(/\s+/g, '_') || 'default'}.glb`}
+                        src={`${process.env.PUBLIC_URL}/assets/${activeCategory?.replace(/\s+/g, '_') || 'default'}.glb`}
                         alt={`${activeCategory} Model`}
                         auto-rotate
                         camera-controls
-                        ar
                         style={{
                             width: '100%',
                             maxWidth: '400px',
@@ -51,6 +46,7 @@ const MenuSection = ({ menu = [] }) => {
                             margin: '20px auto',
                         }}
                     ></model-viewer>
+
                 </div>
             )}
 
@@ -60,7 +56,7 @@ const MenuSection = ({ menu = [] }) => {
                     {filteredMenu.map((item) => (
                         <div key={item["Item Name"]} className="menu-item">
                             <img
-                                src={item.Image}
+                                src={`${process.env.PUBLIC_URL}/${item.Image}`}
                                 alt={item["Item Name"]}
                                 className="details-image"
                                 loading="lazy"
@@ -69,10 +65,7 @@ const MenuSection = ({ menu = [] }) => {
                                 <h4>{item["Item Name"]}</h4>
                                 <p>{item.Description || "Heerlijk gerecht met verse ingrediënten."}</p>
                                 <div className="menu-item-bottom">
-                                    <span>€{item["Price (€)"]}</span>
-                                    <button className="btn" onClick={() => handleViewDetails(item)}>
-                                        Bekijk Details
-                                    </button>
+                                    <span className="menu-price">€{item["Price (€)"]}</span>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +100,7 @@ const MenuSection = ({ menu = [] }) => {
                                 />
                             ))}
                     </div>
-                    <button className="btn" onClick={handleCloseDetails}>
+                    <button className="btn" onClick={() => setSelectedItem(null)}>
                         Terug naar menu
                     </button>
                 </div>

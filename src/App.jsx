@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from './components/Navigation';
-import VideoBanner from './components/VideoBanner';
+import CustomBanner from './components/CustomBanner';
 import MenuSection from './components/MenuSection';
 import OrderOnlineSection from './components/OrderOnlineSection';
 import TestimonialsSection from './components/TestimonialsSection';
@@ -13,7 +13,7 @@ function App() {
     return (
         <>
             <Navigation />
-            <VideoBanner />
+            <CustomBanner />
             <MenuSection menu={menuData} />
             <OrderOnlineSection />
             <TestimonialsSection />

@@ -1,109 +1,237 @@
 /* Root Variables for Color Palette */
 :root {
-  --space-cadet: #2b2d42;
-  --cool-gray: #8d99ae;
-  --anti-flash-white: #edf2f4;
+  --space-cadet: #2C2C2B;
+  --cool-gray: #edf2f4;
+  --anti-flash-white: #FEFBF6;
   --red-pantone: #ef233c;
   --fire-engine-red: #d90429;
   --font-family: 'Poppins', sans-serif;
 }
 
+/* General Section Styling */
 #order-online {
-  padding: 50px 20px;
-  background-color: var(--anti-flash-white);
+  padding: 100px 20px;
+  background-color: #ffffff;
   color: var(--space-cadet);
   text-align: left;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Hero Image Styling */
+.hero-image {
+  position: absolute;
+  top: 10%;
+  right: 0%; /* Ensures consistent placement on all screen sizes */
+  max-width: 100%; /* Ensure the image scales proportionally */
+  width: 800px; /* Default size for large screens */
+  opacity: 0.8;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#order-online:hover .hero-image {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Container Styling */
 .order-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start; /* Keep content aligned to the left */
+  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
   gap: 20px;
+  position: relative;
+  z-index: 1;
+  padding-left: 5%; /* Add padding to push content further left */
 }
 
-.order-content {
-  flex: 1;
-}
-
-#order-online h2 {
-  font-size: 2rem;
-  color: var(--red-pantone);
+/* Title Styling */
+.order-content h2 {
+  font-size: 2.5rem;
+  font-family: var(--font-family), ui-serif;
+  font-weight: 600;
+  color: #f81b1b;
   margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease-in-out;
 }
 
-#order-online p {
+.order-content h2 span {
+  color: var(--fire-engine-red);
+  font-weight: bold;
+}
+
+.order-content p {
   font-size: 1.1rem;
   margin-bottom: 20px;
-  color: var(--cool-gray);
+  color: #000000;
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease-in-out;
+  max-width: 600px; /* Keep the text width constrained */
 }
 
+/**/
 .order-btn {
   display: inline-block;
-  padding: 12px 24px;
-  background-color: var(--red-pantone);
+  padding: 15px 30px;
+  background-color: #f81b1b;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 8px;
-  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease;
   text-decoration: none;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .order-btn:hover {
   background-color: var(--fire-engine-red);
-  color: white;
+  transform: scale(1.1);
 }
 
-/* Styling for the image container with 3D effect */
-#simit-image-container {
-  flex: 1;
-  height: 300px;
+/* Feature Icons Section */
+.feature-icons {
   display: flex;
   justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background: var(--anti-flash-white);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3), 0px 4px 6px rgba(0, 0, 0, 0.2) inset;
-  border-radius: 10px;
-  overflow: hidden;
+  text-align: center;
+  width: 250px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 3D hover effect */
-#simit-image-container:hover {
-  transform: translateY(-10px) scale(1.02); /* Slight hover lift and zoom */
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4), 0px 5px 10px rgba(0, 0, 0, 0.25) inset;
+.feature-item img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
 }
 
-/* Styling for the image inside the container */
-.order-image {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
+.feature-item img:hover {
+  transform: scale(1.1);
 }
 
-/* Responsive Design */
+.feature-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: var(--space-cadet);
+  line-height: 1.4;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 1024px) {
+  #order-online {
+    padding: 80px 15px;
+  }
+
+  .hero-image {
+    width: 500px; /* Slightly smaller for tablets */
+    top: 8%;
+    right: 5%;
+  }
+
+  .order-content h2 {
+    font-size: 2rem;
+  }
+
+  .order-content p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .feature-icons {
+    gap: 30px;
+  }
+
+  .feature-item {
+    width: 220px;
+  }
+}
+
 @media (max-width: 768px) {
-  #simit-image-container {
-    height: 250px; /* Adjust the height for mobile */
-    width: 100%; /* Ensure it spans full width */
+  #order-online {
+    padding: 60px 10px;
   }
 
-  #order-online .order-container {
-    flex-direction: column; /* Stack content vertically */
+  .hero-image {
+    width: 350px; /* Adjusted size for smaller screens */
+    top: 1%;
+    right: -20%; /* Move the pizza image further to the right */
   }
 
-  #order-online .order-content {
-    margin-bottom: 20px; /* Add spacing between sections */
+
+  .order-container {
+    transform: scale(0.9); /* Scales down everything proportionally */
+  }
+
+  .order-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .order-content p {
+    font-size: 0.9rem;
+  }
+
+  .order-btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  .feature-icons {
+    display: flex; /* Ensure flex display is still active */
+    justify-content: space-between; /* Ensure even spacing between items */
+    gap: 10px; /* Reduce the gap for better use of space */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    margin-top: 20px; /* Adjust margin on mobile */
+  }
+
+  .feature-item {
+    width: 48%; /* Make items 48% width to fit two per row */
+    margin-bottom: 20px; /* Add margin to the bottom */
+  }
+
+  .feature-item img {
+    width: 110px; /* Adjust icon size for mobile */
+    height: 80px;
+  }
+
+  /* Optional: If you want the font size to adjust for smaller screens */
+  .feature-item h3 {
+    font-size: 1.2rem; /* Smaller font size */
+  }
+
+  .feature-item p {
+    font-size: 0.9rem; /* Smaller text */
   }
 }
 
-@media (max-width: 480px) {
-  #simit-image-container {
-    height: 200px; /* Further reduce height for smaller screens */
+/* Keyframe Animations for Fading */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

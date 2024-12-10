@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/TestimonialsSection.css';
 import review1 from '../assets/review-1.jpg';
 import review2 from '../assets/review-2.jpg';
@@ -52,17 +52,13 @@ const TestimonialsSection = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const handlePrev = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? reviews.length - 1 : prevIndex - 1
-        );
-    };
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+        }, 3000); // Automatically slides every 3 seconds
 
-    const handleNext = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === reviews.length - 1 ? 0 : prevIndex + 1
-        );
-    };
+        return () => clearInterval(intervalId); // Cleanup interval on unmount
+    }, [reviews.length]);
 
     const renderStars = (count) => {
         return Array(count)
@@ -79,14 +75,18 @@ const TestimonialsSection = () => {
             <div className="container">
                 <h2 className="title">Recensies</h2>
                 <div className="carousel">
-                    <button className="carousel-control-prev" onClick={handlePrev} aria-label="Previous Review">
-                        &#10094;
-                    </button>
-                    <div className="carousel-inner">
-                        {reviews.map((review, index) => (
+                    <div
+                        className="carousel-inner"
+                        style={{
+                            transform: `translateX(-${currentIndex * 100}%)`,
+                            width: `${reviews.length * 100}%`,
+                        }}
+                    >
+                        {reviews.map((review) => (
                             <div
                                 key={review.id}
-                                className={`carousel-item ${index === currentIndex ? "active" : ""}`}
+                                className="carousel-item"
+                                style={{ width: `${100 / reviews.length}%` }}
                             >
                                 <div className="carousel-caption">
                                     <img src={review.img} alt={`Review by ${review.name}`} />
@@ -98,18 +98,6 @@ const TestimonialsSection = () => {
                             </div>
                         ))}
                     </div>
-                    <button className="carousel-control-next" onClick={handleNext} aria-label="Next Review">
-                        &#10095;
-                    </button>
-                </div>
-                <div className="carousel-indicators">
-                    {reviews.map((_, index) => (
-                        <button
-                            key={index}
-                            className={`indicator ${index === currentIndex ? "active" : ""}`}
-                            onClick={() => setCurrentIndex(index)}
-                        ></button>
-                    ))}
                 </div>
             </div>
         </section>
