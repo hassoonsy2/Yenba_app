@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/Yenba_app/static/css/main.cc3181b4.css",
+    "main.js": "/Yenba_app/static/js/main.a428fb9c.js",
+    "static/media/review4.jpg": "/Yenba_app/static/media/review4.f190534082b394f6e3d2.jpg",
+    "static/media/review3.jpg": "/Yenba_app/static/media/review3.d8c15f659d7e935008c9.jpg",
+    "static/media/review5.jpg": "/Yenba_app/static/media/review5.5e34170483355831d7e0.jpg",
+    "static/media/1.jpg": "/Yenba_app/static/media/1.d086a231188791cb7f01.jpg",
+    "static/media/fa-solid-900.ttf": "/Yenba_app/static/media/fa-solid-900.ad1782c70927ebc5bc87.ttf",
+    "static/media/Yenba  (2) (1).pdf": "/Yenba_app/static/media/Yenba  (2) (1).94fa3d76bc819a0a37e3.pdf",
+    "static/media/pizza-icon.png": "/Yenba_app/static/media/pizza-icon.7dd3fff9bfc8589ce1d1.png",
+    "static/media/fa-brands-400.ttf": "/Yenba_app/static/media/fa-brands-400.26b80c8830bebf340211.ttf",
+    "static/media/2.jpg": "/Yenba_app/static/media/2.49d00cb7b0a475f8dd33.jpg",
+    "static/media/fa-solid-900.woff2": "/Yenba_app/static/media/fa-solid-900.83a538a018a9e44b023a.woff2",
+    "static/media/review-2.jpg": "/Yenba_app/static/media/review-2.960ff282036e3c4e63eb.jpg",
+    "static/media/review-1.jpg": "/Yenba_app/static/media/review-1.f6e01ff2a6ae714f244b.jpg",
+    "static/media/fa-brands-400.woff2": "/Yenba_app/static/media/fa-brands-400.fdbb558523a380307689.woff2",
+    "static/media/3.jpg": "/Yenba_app/static/media/3.e6a88ff0f29151a69bf7.jpg",
+    "static/media/fa-regular-400.ttf": "/Yenba_app/static/media/fa-regular-400.05fdd87be89f7f8f0a1e.ttf",
+    "static/media/5.png": "/Yenba_app/static/media/5.e11fdbe8cdd9af8dae8b.png",
+    "static/media/fa-regular-400.woff2": "/Yenba_app/static/media/fa-regular-400.4f6a2dabee9c092d09b9.woff2",
+    "static/media/delivery-icon.png": "/Yenba_app/static/media/delivery-icon.0896b70da09ae6011cc8.png",
+    "static/media/fa-v4compatibility.ttf": "/Yenba_app/static/media/fa-v4compatibility.fa86b3c85e77abbd2ebd.ttf",
+    "static/media/fa-v4compatibility.woff2": "/Yenba_app/static/media/fa-v4compatibility.c3ea317a0f10f201597f.woff2",
+    "index.html": "/Yenba_app/index.html",
+    "main.cc3181b4.css.map": "/Yenba_app/static/css/main.cc3181b4.css.map",
+    "main.a428fb9c.js.map": "/Yenba_app/static/js/main.a428fb9c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc3181b4.css",
+    "static/js/main.a428fb9c.js"
+  ]
+}
