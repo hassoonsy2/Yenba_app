@@ -1,0 +1,78 @@
+[
+    {
+        "Category": "Sandwiches",
+        "Item Name": "Healthy Sandwich",
+        "Price (\u20ac)": 7.0,
+        "Ingredients": [
+            "Whole grain bread",
+            "Avocado",
+            "Tomato",
+            "Lettuce",
+            "Cucumber"
+        ],
+        "Dietary Info": [
+            "Vegan",
+            "Lactose-Free"
+        ],
+        "Icons": [
+            "vegan-icon.png",
+            "lactose-free-icon.png"
+        ]
+    },
+    {
+        "Category": "Sandwiches",
+        "Item Name": "Vitello Tonnato Cold Sandwich",
+        "Price (\u20ac)": 5.5,
+        "Ingredients": [
+            "Ciabatta bread",
+            "Tuna",
+            "Mayo",
+            "Capers",
+            "Lettuce"
+        ],
+        "Dietary Info": [
+            "Contains Fish"
+        ],
+        "Icons": [
+            "fish-icon.png"
+        ]
+    },
+    {
+        "Category": "Sandwiches",
+        "Item Name": "Caprese Cold Sandwich",
+        "Price (\u20ac)": 7.0,
+        "Ingredients": [
+            "Ciabatta bread",
+            "Mozzarella",
+            "Tomato",
+            "Basil"
+        ],
+        "Dietary Info": [
+            "Vegetarian",
+            "Contains Lactose"
+        ],
+        "Icons": [
+            "vegetarian-icon.png",
+            "lactose-icon.png"
+        ]
+    },
+    {
+        "Category": "Kumpir",
+        "Item Name": "Kumpir with Crispy Chicken",
+        "Price (\u20ac)": 11.5,
+        "Ingredients": [
+            "Baked potato",
+            "Crispy chicken",
+            "Cheese",
+            "Sour cream"
+        ],
+        "Dietary Info": [
+            "Contains Lactose",
+            "Contains Gluten"
+        ],
+        "Icons": [
+            "lactose-icon.png",
+            "gluten-icon.png"
+        ]
+    }
+]

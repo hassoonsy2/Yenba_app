@@ -1,0 +1,109 @@
+/* Root Variables for Color Palette */
+:root {
+  --space-cadet: #2b2d42;
+  --cool-gray: #8d99ae;
+  --anti-flash-white: #edf2f4;
+  --red-pantone: #ef233c;
+  --fire-engine-red: #d90429;
+  --font-family: 'Poppins', sans-serif;
+}
+
+#order-online {
+  padding: 50px 20px;
+  background-color: var(--anti-flash-white);
+  color: var(--space-cadet);
+  text-align: left;
+}
+
+.order-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.order-content {
+  flex: 1;
+}
+
+#order-online h2 {
+  font-size: 2rem;
+  color: var(--red-pantone);
+  margin-bottom: 10px;
+}
+
+#order-online p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: var(--cool-gray);
+}
+
+.order-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--red-pantone);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.order-btn:hover {
+  background-color: var(--fire-engine-red);
+  color: white;
+}
+
+/* Styling for the image container with 3D effect */
+#simit-image-container {
+  flex: 1;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--anti-flash-white);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3), 0px 4px 6px rgba(0, 0, 0, 0.2) inset;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 3D hover effect */
+#simit-image-container:hover {
+  transform: translateY(-10px) scale(1.02); /* Slight hover lift and zoom */
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4), 0px 5px 10px rgba(0, 0, 0, 0.25) inset;
+}
+
+/* Styling for the image inside the container */
+.order-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #simit-image-container {
+    height: 250px; /* Adjust the height for mobile */
+    width: 100%; /* Ensure it spans full width */
+  }
+
+  #order-online .order-container {
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  #order-online .order-content {
+    margin-bottom: 20px; /* Add spacing between sections */
+  }
+}
+
+@media (max-width: 480px) {
+  #simit-image-container {
+    height: 200px; /* Further reduce height for smaller screens */
+  }
+}

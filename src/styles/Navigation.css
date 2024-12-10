@@ -1,0 +1,94 @@
+/* src/components/Navigation.css */
+
+/* Root Variables for Color Palette */
+:root {
+  --space-cadet: #2B2D42;        /* Dark Blue */
+  --cool-gray: #8D99AE;          /* Gray */
+  --anti-flash-white: #EDF2F4;   /* Off-White */
+  --red-pantone: #EF233C;        /* Bright Red */
+  --fire-engine-red: #D90429;    /* Dark Red */
+  --font-family: 'Poppins', sans-serif;
+}
+
+/* Reset and Base Styles */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  background-color: var(--space-cadet);
+  color: var(--anti-flash-white);
+  font-family: var(--font-family);
+}
+
+/* Navbar Brand (Logo) */
+.navbar .navbar-item img {
+  max-height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.navbar .navbar-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Navbar Items */
+.navbar .navbar-item {
+  font-weight: 500;
+  color: var(--anti-flash-white);
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-item:hover {
+  color: var(--red-pantone);
+}
+
+/* Navbar Burger (Mobile Menu Icon) */
+.navbar-burger {
+  color: var(--anti-flash-white);
+}
+
+.navbar-burger:hover {
+  color: var(--red-pantone);
+}
+
+/* Navbar Menu (for mobile) */
+.navbar-menu {
+  background-color: var(--space-cadet);
+}
+
+.navbar-menu .navbar-item {
+  color: var(--anti-flash-white);
+}
+
+.navbar-menu .navbar-item:hover {
+  color: var(--red-pantone);
+}
+
+/* Button in Navbar */
+.navbar .button {
+  background-color: var(--red-pantone);
+  color: var(--anti-flash-white);
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .button:hover {
+  background-color: var(--fire-engine-red);
+  color: var(--anti-flash-white);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+  .navbar-menu {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}

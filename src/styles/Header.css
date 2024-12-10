@@ -1,0 +1,67 @@
+:root {
+  --space-cadet: #2b2d42;
+  --cool-gray: #8d99ae;
+  --anti-flash-white: #edf2f4;
+  --red-pantone: #ef233c;
+  --fire-engine-red: #d90429;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar {
+  background-color: var(--space-cadet);
+  color: var(--anti-flash-white);
+}
+
+.navbar a {
+  color: var(--anti-flash-white);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--red-pantone);
+}
+
+.navbar-burger {
+  color: var(--anti-flash-white);
+}
+
+.navbar-item img {
+  max-height: 50px;
+}
+
+.navbar-menu {
+  background-color: var(--space-cadet);
+}
+
+.navbar-menu .navbar-end {
+  align-items: center;
+}
+
+.navbar-menu .navbar-end .navbar-item {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-burger:hover {
+  color: var(--red-pantone);
+  background-color: transparent;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    background-color: var(--space-cadet);
+  }
+
+  .navbar-burger {
+    margin: 0 1rem;
+  }
+}

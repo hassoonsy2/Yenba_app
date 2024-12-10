@@ -1,0 +1,196 @@
+/* Root Variables for Color Palette */
+:root {
+  --space-cadet: #1e2235;        /* Very Dark Blue */
+  --cool-gray: #8D99AE;          /* Cool Gray */
+  --anti-flash-white: #EDF2F4;   /* Off-White */
+  --red-pantone: #EF233C;        /* Bright Red */
+  --fire-engine-red: #D90429;    /* Dark Red */
+  --font-family: 'Poppins', sans-serif;
+}
+
+.testimonial-section {
+  background-color: var(--space-cadet); /* Very Dark Blue */
+  padding: 80px 20px;
+  color: var(--anti-flash-white); /* Off-White */
+  text-align: center;
+}
+
+.testimonial-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--red-pantone); /* Bright Red */
+  animation: fadeInDown 1s;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+  position: relative;
+}
+
+.carousel-item {
+  min-width: 300px;
+  flex: 0 0 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  display: flex;
+  opacity: 1;
+  animation: fadeIn 0.8s;
+}
+
+.carousel-caption {
+  color: var(--cool-gray); /* Gray for text contrast */
+  font-family: var(--font-family);
+  background: var(--anti-flash-white);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  width: 80%;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.carousel-caption:hover {
+  transform: scale(1);
+}
+
+.carousel-caption img {
+  border-radius: 50%;
+  border: 3px solid var(--fire-engine-red); /* Bright Red Border */
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: var(--space-cadet); /* Dark Blue */
+}
+
+.carousel-caption h5 {
+  font-weight: bold;
+  color: var(--red-pantone); /* Bright Red */
+  margin-bottom: 0.2rem;
+}
+
+.carousel-caption small {
+  color: var(--cool-gray); /* Gray */
+  font-size: 0.9rem;
+}
+
+.stars {
+  margin-top: 10px;
+}
+
+.star {
+  color: var(--fire-engine-red);
+  font-size: 1.2rem;
+  margin-right: 2px;
+}
+
+/* Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--red-pantone);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+/* Indicators */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: var(--cool-gray);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: var(--red-pantone);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonial-section h2 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .carousel-caption img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}

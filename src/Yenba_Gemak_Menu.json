@@ -1,0 +1,210 @@
+[
+    {
+        "Category":"Sandwiches",
+        "Item Name":"Healthy Sandwich",
+        "Price (\u20ac)":7.0,
+        "Image" : "/assets/healthyy_s.jpg"
+    },
+    {
+        "Category":"Sandwiches",
+        "Item Name":"Vitello Tonnato Cold Sandwich",
+        "Price (\u20ac)":5.5,
+        "Image" : "/assets/valntino_s.jpeg"
+
+
+
+
+    },
+    {
+        "Category":"Sandwiches",
+        "Item Name":"Caprese Cold Sandwich",
+        "Price (\u20ac)":7.0,
+        "Image" : "/assets/Caprese-Sandwich-.jpg"
+
+
+
+
+    },
+    {
+        "Category":"Sandwiches",
+        "Item Name":"Philly Cheesesteak Hot Sandwich",
+        "Price (\u20ac)":9.0,
+        "Image" : "/assets/philly_s.jpeg"
+
+
+    },
+    {
+        "Category":"Sandwiches",
+        "Item Name":"Grilled Sausage Naturel",
+        "Price (\u20ac)":6.5,
+        "Image" : "/assets/grill.jpg"
+
+    },
+    {
+        "Category":"Pide",
+        "Item Name":"K\u0131ymal\u0131 Pide",
+        "Price (\u20ac)":5.5,
+        "Image" : "/assets/kiymali_pide.jpg"
+
+
+    },
+
+    {
+        "Category":"Pide",
+        "Item Name":"Ka\u015farl\u0131 Pide Veggie",
+        "Price (\u20ac)":5.5,
+        "Image" : "/assets/kasarli_v.jpg"
+
+    },
+    {
+        "Category":"Pide",
+        "Item Name":"Ka\u015farl\u0131 Mantarl\u0131 Pide Veggie",
+        "Price (\u20ac)":5.5,
+        "Image" : "/assets/mantarli-v.png"
+
+    },
+    {
+        "Category":"Pide",
+        "Item Name":"Ispanakl\u0131 Pide Veggie",
+        "Price (\u20ac)":5.0,
+        "Image" : "/assets/Ispanakli.png"
+
+    },
+    {
+        "Category":"Pizza",
+        "Item Name":"Margarita",
+        "Price (\u20ac)":4.5,
+        "Image" : "/assets/pizza_M.jpeg"
+
+
+    },
+    {
+        "Category":"Pizza",
+        "Item Name":"Mushroom",
+        "Price (\u20ac)":4.5,
+        "Image" : "/assets/MushroomPizza.png"
+    },
+    {
+        "Category":"Pizza",
+        "Item Name":"Paprika",
+        "Price (\u20ac)":4.5,
+        "Image" : "/assets/pizza_P.jpeg"
+
+    },
+    {
+        "Category":"Pizza",
+        "Item Name":"Salami",
+        "Price (\u20ac)":5.5,
+        "Image" : "/assets/pizza_S.jpeg"
+    },
+    {
+        "Category":"Pizza",
+        "Item Name":"Tuna",
+        "Price (\u20ac)":6.0,
+        "Image" : "/assets/Tuna-Pizza.jpg"
+
+    },
+    {
+        "Category":"Pide",
+        "Item Name":"Lahmachun",
+        "Price (\u20ac)":6.5,
+        "Image" : "/assets/turkis_pizza_n.jpg"
+
+    },
+
+    {
+        "Category":"Simit",
+        "Item Name":"Simit with Sesame",
+        "Price (\u20ac)":2.5
+    },
+    {
+        "Category":"Simit",
+        "Item Name":"Simit Sandwich",
+        "Price (\u20ac)":3.95
+    },
+    {
+        "Category":"Desserts",
+        "Item Name":"Pistache",
+        "Price (\u20ac)":5.5
+    },
+    {
+        "Category":"Desserts",
+        "Item Name":"Chocolate",
+        "Price (\u20ac)":5.5
+    },
+    {
+        "Category":"Desserts",
+        "Item Name":"\u015e\u00f6biyet",
+        "Price (\u20ac)":5.5
+    },
+    {
+        "Category":"Desserts",
+        "Item Name":"Tulumba",
+        "Price (\u20ac)":5.5
+    },
+    {
+        "Category":"Desserts",
+        "Item Name":"Sarma F\u0131st\u0131k",
+        "Price (\u20ac)":5.5
+    },
+    {
+        "Category":"Desserts",
+        "Item Name":"Prens Cevizli",
+        "Price (\u20ac)":5.5
+    },
+    {
+        "Category":"Desserts",
+        "Item Name":"S\u00fctla\u00e7",
+        "Price (\u20ac)":7.0
+    },
+    {
+        "Category":"Desserts",
+        "Item Name":"Trile\u00e7e",
+        "Price (\u20ac)":6.0
+    },
+    {
+        "Category":"Desserts",
+        "Item Name":"Cheesecake",
+        "Price (\u20ac)":4.5
+    },
+    {
+        "Category":"Desserts",
+        "Item Name":"Profiterole",
+        "Price (\u20ac)":5.5
+    },
+    {
+        "Category":"Kumpir",
+        "Item Name":"Authentic Classic Kumpir",
+        "Price (\u20ac)":10.5
+    },
+    {
+        "Category":"Kumpir",
+        "Item Name":"Plain Kumpir",
+        "Price (\u20ac)":9.5
+    },
+    {
+        "Category":"Kumpir",
+        "Item Name":"Veggi Kumpir",
+        "Price (\u20ac)":9.5
+    },
+    {
+        "Category":"Kumpir",
+        "Item Name":"Avocado Kumpir",
+        "Price (\u20ac)":10.5
+    },
+    {
+        "Category":"Kumpir",
+        "Item Name":"Tuna Kumpir",
+        "Price (\u20ac)":11.5
+    },
+    {
+        "Category":"Kumpir",
+        "Item Name":"Mexican Kumpir",
+        "Price (\u20ac)":10.99
+    },
+    {
+        "Category":"Kumpir",
+        "Item Name":"Kumpir with Crispy Chicken",
+        "Price (\u20ac)":11.5
+    }
+]

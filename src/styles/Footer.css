@@ -1,0 +1,97 @@
+/* src/components/Footer.css */
+
+/* Root Variables for Color Palette */
+:root {
+  --space-cadet: #2B2D42;        /* Dark Blue */
+  --cool-gray: #8D99AE;          /* Gray */
+  --anti-flash-white: #EDF2F4;   /* Off-White */
+  --red-pantone: #EF233C;        /* Bright Red */
+  --fire-engine-red: #D90429;    /* Dark Red */
+  --font-family: 'Poppins', sans-serif;
+}
+
+.footer {
+  background-color: var(--space-cadet); /* Dark Blue Background */
+  color: var(--anti-flash-white);      /* Off-White Text */
+  text-align: center;
+  padding: 50px 20px;
+  font-family: var(--font-family);
+}
+
+.branding-text {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: var(--anti-flash-white); /* Off-White */
+  line-height: 1.6;
+}
+
+.branding-text span {
+  color: var(--red-pantone);  /* Bright Red */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: var(--cool-gray); /* Gray for Social Icons */
+  color: var(--space-cadet);         /* Dark Blue Icon */
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.5rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: var(--red-pantone); /* Bright Red on Hover */
+  color: var(--anti-flash-white);      /* White Icon on Hover */
+  transform: scale(1.2);
+}
+
+.footer-links {
+  margin-top: 20px;
+}
+
+.footer-links a {
+  color: var(--anti-flash-white); /* Off-White */
+  margin: 0 10px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--red-pantone); /* Bright Red on Hover */
+}
+
+.footer-note {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: var(--cool-gray); /* Gray Note Text */
+}
+
+@media (max-width: 768px) {
+  .social-icons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .footer-links a {
+    display: block;
+    margin-bottom: 5px;
+  }
+}

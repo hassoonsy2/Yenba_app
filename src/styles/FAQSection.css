@@ -1,0 +1,103 @@
+/* src/components/FAQSection.css */
+
+/* Root Variables for Color Palette */
+:root {
+  --space-cadet: #2B2D42;        /* Dark Blue */
+  --cool-gray: #8D99AE;          /* Gray */
+  --anti-flash-white: #EDF2F4;   /* Off-White */
+  --red-pantone: #EF233C;        /* Bright Red */
+  --fire-engine-red: #D90429;    /* Dark Red */
+  --font-family: 'Poppins', sans-serif;
+}
+
+.faq-section {
+  padding: 80px 20px;
+  background-color: var(--anti-flash-white); /* Off-White */
+}
+
+.faq-title {
+  font-size: 2.5rem;
+  color: var(--red-pantone); /* Bright Red */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: var(--font-family);
+}
+
+.faq-subtitle {
+  font-size: 1.1rem;
+  color: var(--cool-gray); /* Gray */
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: var(--font-family);
+}
+
+.faq-cards {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-card {
+  background-color: var(--anti-flash-white); /* Off-White */
+  border-radius: 10px;
+  border: 1px solid var(--cool-gray); /* Gray border */
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.faq-card:hover {
+  background-color: var(--space-cadet); /* Dark Blue */
+  color: var(--anti-flash-white); /* White text */
+  transform: translateY(-5px);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--cool-gray); /* Gray */
+  font-family: var(--font-family);
+}
+
+.faq-card:hover .faq-question {
+  color: var(--anti-flash-white); /* White text on hover */
+}
+
+.faq-answer {
+  font-size: 1rem;
+  color: var(--space-cadet); /* Dark Blue */
+  line-height: 1.6;
+  margin-top: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-card.active .faq-answer {
+  max-height: 500px; /* Adjust as needed */
+}
+
+.faq-card:hover .faq-answer {
+  color: var(--anti-flash-white); /* White text when hovered */
+}
+
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 2rem;
+  }
+
+  .faq-subtitle {
+    font-size: 1rem;
+  }
+
+  .faq-question {
+    font-size: 1.2rem;
+  }
+}
